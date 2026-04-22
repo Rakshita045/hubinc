@@ -1,4 +1,4 @@
-export const APK_URL = "";
+export const APK_URL = "https://github.com/Rakshita045/hubinc/releases/download/2.0.6/hub.v2.0.6.apk";
 export const APP_VERSION = "2.0.6";
 
 export function DownloadButtons({ centered = false }: { centered?: boolean }) {
