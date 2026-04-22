@@ -1,0 +1,158 @@
+.page {
+  --bg0: #04080f;
+  --bg2: #0b1828;
+  --edge: rgba(255, 255, 255, 0.07);
+  --orange: #f59e0b;
+  --text: #f1f5f9;
+  --text2: rgba(241, 245, 249, 0.58);
+  --max: 800px;
+
+  min-height: 100vh;
+  background: var(--bg0);
+  color: var(--text);
+  font-family: var(--font-instrument), sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  background: rgba(4, 8, 15, 0.85);
+  backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--edge);
+}
+
+.navWrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo {
+  font-family: var(--font-bricolage), sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.policyContainer {
+  max-width: var(--max);
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.policyContainer h1,
+.policyContainer h2,
+.policyContainer h3 {
+  font-family: var(--font-bricolage), sans-serif;
+}
+
+.policyContainer h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.lastUpdated {
+  font-size: 14px;
+  color: var(--orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 48px;
+}
+
+.policyContainer h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 48px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--edge);
+}
+
+.policyContainer p {
+  color: var(--text2);
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+
+.policyContainer strong {
+  color: var(--text);
+}
+
+.policyContainer ul {
+  padding-left: 24px;
+  margin: 0 0 24px;
+}
+
+.policyContainer li {
+  color: var(--text2);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.emailLink {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacyCta {
+  margin-top: 48px;
+  padding: 20px 24px;
+  background: var(--bg2);
+  border: 1px solid var(--edge);
+  border-left: 3px solid var(--orange);
+  border-radius: 8px;
+}
+
+.privacyCta p {
+  margin-bottom: 0;
+}
+
+.privacyCta a {
+  color: var(--orange);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.privacyCta a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 680px) {
+  .navWrap {
+    padding: 0 20px;
+  }
+
+  .policyContainer {
+    margin: 40px auto;
+  }
+}
